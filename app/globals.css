@@ -3,25 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 } */
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100vh;
 }
-.header{
+
+.header {
   height: 100px;
   text-decoration: underline;
 }
-.gameBoard{
+
+.gameBoard {
   display: flex;
   flex-wrap: wrap;
   width: 300px;
   height: 300px;
   border: solid 2px black;
 }
-.Squar{
+
+.Squar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,26 +33,47 @@
   border: solid 2px black;
   box-sizing: border-box;
 }
-.circle, .cross{
+
+.circle,
+.cross {
   font-size: 70px;
   font-weight: bold;
 }
-.circle{
+
+.circle {
   color: blue;
 }
-.cross{
+
+.cross {
   color: red;
 }
-.player{
+
+.player {
   font-size: 20px;
   font-weight: bold;
   color: rgb(162, 196, 111);
 }
-.msgs{
+
+.msgs {
   margin-top: 10px;
 }
-.wins{
+
+.wins {
   font-size: 20px;
   font-weight: bold;
   color: green;
+}
+
+.celebrate-container {
+  background-color: gray;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
 }

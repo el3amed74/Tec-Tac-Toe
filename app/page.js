@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Cell from "./components/cell";
-
+import Celebration from "./components/celebration";
 const winningCombos = [
   [0, 1, 2],
   [3, 4, 5],
@@ -58,7 +58,10 @@ export default function Home() {
         ))}
       </div>
       <div className="msgs">
-        <div className="wins">{winningMessage}</div>
+        {winningMessage && <div className="wins">
+          <Celebration wins={winningMessage}/>
+        </div>}
+        {/* <div className="wins">{winningMessage}</div> */}
         {!winningMessage && <div className="playerTurn">
           it's now <span className="player">{go}</span> turn!
         </div>
