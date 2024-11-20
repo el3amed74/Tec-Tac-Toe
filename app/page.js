@@ -17,6 +17,7 @@ export default function Home() {
   const [cells, setCells] = useState(["", "", "", "", "", "", "", "", ""]);
   const [go, setGo] = useState("circle");
   const [winningMessage, setWinningMessage] = useState("");
+  const [gameOver, setGameOver] = useState("");
 
   console.log(cells);
 
@@ -36,6 +37,7 @@ export default function Home() {
   useEffect(() => {
     if (cells.every((cell) => cell !== "" && !winningMessage)) {
       setWinningMessage(" Draw! ")
+      setGameOver("true");
     }
   }, [cells, winningMessage]);
 
@@ -58,9 +60,20 @@ export default function Home() {
         ))}
       </div>
       <div className="msgs">
-        {winningMessage && <div className="wins">
-          <Celebration wins={winningMessage}/>
-        </div>}
+        {(!gameOver && winningMessage) ? <div className="wins">
+          <Celebration wins={winningMessage} /></div> : <div className="wins">{winningMessage}</div>}
+
+
+
+        {/* {
+          (!gameOver && winningMessage) ?
+            <div className="wins">
+              <Celebration wins={winningMessage}/>
+        </div> :
+            <div className="wins">Draw!!</div>} */}
+        {/* {winningMessage  && <div className="wins">
+          <Celebration wins={winningMessage} />
+        </div>} */}
         {/* <div className="wins">{winningMessage}</div> */}
         {!winningMessage && <div className="playerTurn">
           it's now <span className="player">{go}</span> turn!
