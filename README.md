@@ -9,5 +9,5 @@ The animation is implemented using the `canvas-confetti` library and is triggere
 
 
 
-You can also try the live demo [here]( https://example.com/demo](https://el3amed74.github.io/Tec-Tac-Toe/)).
+You can also try the live demo [here](https://el3amed74.github.io/Tec-Tac-Toe/).
 
